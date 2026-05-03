@@ -261,6 +261,7 @@
       line-height: 1.0;
       letter-spacing: -2px;
       margin-bottom: 10px;
+	  white-space: nowrap;
     }
     .hero-name em {
       font-style: normal;
@@ -776,6 +777,59 @@
         </a>
       </div>  
   </div>
+ <svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" fill="none" style="filter: drop-shadow(0 20px 30px rgba(0,0,0,0.08));">
+  <defs>
+    <!-- Background Glow - Slightly desaturated for better integration -->
+    <radialGradient id="screenRadial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5b8af0" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#5b8af0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Ambient Background Glow -->
+  <circle cx="350" cy="150" r="120" fill="url(#screenRadial)" />
+
+  <!-- 2. Floor Shadow -->
+  <ellipse cx="250" cy="310" rx="120" ry="8" fill="black" opacity="0.08" />
+
+  <!-- Scale transform to subtly reduce size (approx 10-15%) -->
+  <g class="laptop-main" transform="translate(25, 15) scale(0.9)" style="animation: hover 6s ease-in-out infinite;">
+    <!-- 3. Laptop Lid -->
+    <rect x="75" y="40" width="350" height="230" rx="14" fill="#1e2227" stroke="#333" stroke-width="1.2"/>
+    
+    <!-- 4. Screen Area -->
+    <rect x="84" y="48" width="332" height="214" rx="6" fill="#0d1117"/>
+    
+    <!-- 5. Code Lines (Subtle Opacity) -->
+    <g transform="translate(105, 80)">
+      <rect width="60" height="5" rx="2" fill="#c678dd" opacity="0.7" /> 
+      <rect y="15" width="110" height="5" rx="2" fill="#61afef" opacity="0.6" /> 
+      <rect y="30" x="15" width="130" height="5" rx="2" fill="#98c379" opacity="0.5" /> 
+      <rect y="45" x="15" width="90" height="5" rx="2" fill="#d19a66" opacity="0.6" /> 
+      <rect y="60" width="40" height="5" rx="2" fill="#56b6c2" opacity="0.7" /> 
+    </g>
+
+    <!-- 6. Progress Pill (Fintech Style) -->
+    <rect x="180" y="210" width="140" height="28" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+    <rect x="195" y="221" width="110" height="6" rx="3" fill="rgba(255,255,255,0.05)"/>
+    <rect x="195" y="221" width="70" height="6" rx="3" fill="#38d9c0">
+       <animate attributeName="width" values="20;110;20" dur="4s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- 7. Laptop Base -->
+    <path d="M75 270 L425 270 L455 315 L45 315 Z" fill="#2c313a" />
+    <path d="M45 315 L455 315 L450 320 L50 320 Z" fill="#181a1f" /> 
+    <rect x="205" y="280" width="90" height="20" rx="4" fill="rgba(0,0,0,0.15)" /> <!-- Trackpad -->
+  </g>
+
+  <style>
+    @keyframes hover {
+      0%, 100% { transform: translate(25px, 15px) scale(0.9); }
+      50% { transform: translate(25px, 10px) scale(0.9); }
+    }
+  </style>
+</svg>
+
 </section>
 
 <!-- ─── ABOUT ─────────────────────────────────────────────── -->
@@ -905,14 +959,14 @@
       <div class="timeline-meta">Barclays · Chennai, India · Jul 2024 – Present</div>
       <div class="timeline-card">
         <ul>
-          <li>Built Angular standalone components using Signals, delivering <strong>↑ 34% UI load time reduction</strong> on high-density data screens.</li>
-          <li>Engineered <strong>AG Grid dashboards</strong> with Master-Detail views and dynamic column rendering for complex operational reporting.</li>
+          <li>Built Angular standalone components using Signals, delivering ↑ 34% UI load time reduction on high-density data screens.</li>
+          <li>Engineered AG Grid dashboards with Master-Detail views and dynamic column rendering for complex operational reporting.</li>
           <li>Designed enterprise-grade multi-step forms using Reactive Forms and custom validators across critical banking modules.</li>
-          <li>Modernized legacy applications by migrating <strong>Spring to Spring Boot</strong>, improving system maintainability across banking workflows.</li>
-          <li>Implemented secure <strong>role-based authentication & authorization</strong>, enforcing controlled API access across enterprise endpoints.</li>
-          <li>Scaled unit test coverage from <strong>0% → 90%</strong> (Angular + Java), <strong>significantly reducing UI defects</strong> and improving release stability.</li>
-          <li>Automated API & UI testing using Karate, resulting in <strong>↓ 50–60% manual regression effort</strong> and faster release cycles.</li>
-          <li>Optimized <strong>GitLab CI/CD pipelines</strong>, built Docker images deployed on Rancher for consistent cross-environment releases.</li>
+          <li>Modernized legacy applications by migrating Spring to Spring Boot, improving system maintainability across banking workflows.</li>
+          <li>Implemented secure role-based authentication & authorization, enforcing controlled API access across enterprise endpoints.</li>
+          <li>Scaled unit test coverage from 0% → 90% (Angular + Java), significantly reducing UI defects and improving release stability.</li>
+          <li>Automated API & UI testing using Karate, resulting in ↓ 50–60% manual regression effort and faster release cycles.</li>
+          <li>Optimized GitLab CI/CD pipelines, built Docker images deployed on Rancher for consistent cross-environment releases.</li>
           <li>Developed PowerShell automation to consolidate multi-sheet file processing, cutting a 4-step manual upload process down to one.</li>
           <li>Received two formal recognitions at Barclays for quick learning and continuous improvement initiatives.</li>
         </ul>
