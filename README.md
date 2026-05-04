@@ -48,6 +48,4 @@ This website serves as a central place to:
 
 ---
 
-## ⚙️ Setup & Deployment
-
 This portfolio is hosted using **GitHub Pages**.
